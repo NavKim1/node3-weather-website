@@ -12,7 +12,7 @@ $(function() {
 		e.preventDefault();
 		if(locationField.val() != ''){
 		
-			fetch('http://localhost:3000/weather?address='+locationField.val()).then((response) => {
+			fetch('/weather?address='+locationField.val()).then((response) => {
 				response.json().then((data) => {
 					if(data.error){
 						//console.log('data :'+data)	
